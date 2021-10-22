@@ -28,14 +28,14 @@ class Name extends Component {
         let lastName = document.getElementById('lastName').value;
 
 
-        if(firstName.length < 2) {
+        if(firstName.value == null) {
 
             toast.error(" 😬 Please enter your First Name");
 
             values.preventDefault();
         }
 
-        if (lastName.length < 2) {
+        if (lastName.value == null) {
             toast.error(" 😬 Please enter your Last Name");
 
             values.preventDefault();
@@ -80,7 +80,17 @@ class Name extends Component {
 
         let firstName = document.getElementById('firstName').value;
 
-        this.props.setFName(firstName)
+        if(firstName.length < 2) {
+
+            toast.error(" 😬 Please enter your First Name");
+
+            values.preventDefault();
+            return ;
+        }
+        else{
+            this.props.setFName(firstName)
+
+        }
 
     }
 
@@ -88,7 +98,18 @@ class Name extends Component {
 
         let lastName = document.getElementById('lastName').value;
 
-        this.props.setLName(lastName)
+        if (lastName.length < 2) {
+            toast.error(" 😬 Please enter your Last Name");
+
+            values.preventDefault();
+
+            return;
+        }
+
+        else {
+            this.props.setLName(lastName)
+
+        }
     }
 
 
@@ -97,7 +118,7 @@ class Name extends Component {
             <div>
                 <div className="back bg-white">
                     <div className="bg-blue-500 headerText justify-center align-middle text-center">
-                        <h2>Get Your Free Health Insurance Quote</h2>
+                        <h2>Get Your Free Business Insurance Quote</h2>
                     </div>
                     <div className="bg-white rounded-lg shadow-xl sm:max-w-md sm:w-full sm:mx-auto sm:overflow-hidden m-12 formDiv content-center">
                         <div className="px-4 py-8 sm:px-10">
@@ -151,7 +172,7 @@ class Name extends Component {
                                                     <div className="flex flex-wrap -mx-4 -mb-4 md:mb-0" >
                                                         <div className="w-full md:w-1/2 px-4 mb-4 md:mb-0">
 
-                                                            <input className="appearance-none w-full p-3 text-lg font-semibold leading-none bg-white rounded " type="text" name="firstName" placeholder="First Name" id="firstName"  onChange={this.postFName}/>
+                                                            <input className="appearance-none w-full p-3 text-lg font-semibold leading-none bg-white rounded " type="text" name="firstName" placeholder="First Name" id="firstName" onChange={this.postFName}/>
                                                         </div>
 
 

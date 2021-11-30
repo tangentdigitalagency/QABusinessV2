@@ -268,14 +268,18 @@ class EmailPhone extends Component {
                                                         </div>
 
 
-                                                        <div className="w-full md:w-1/2 px-4 mb-4 md:mb-0">
-                                                        <PhoneInput
+                                                        <div className="w-full md:w-1/2 px-4 mb-4 md:mb-0" data-bucket={2}>
+                                                        {/* <NumberFormat format="###-###-####" mask=""  className="appearance-none w-full p-3 text-lg font-semibold leading-none bg-white rounded " id="phone_home" placeholder="Phone Number" name="phone_home" allowEmptyFormatting type='tel'
+                                                        onChange={this.postPhone}/> */}
+                                                         <PhoneInput
       country="US"
-      className="appearance-none w-full p-3 text-lg font-semibold leading-none bg-white rounded border-gray " id="phone_home" placeholder="Phone Number" name="phone_home" 
+      className="appearance-none w-full p-3 text-lg font-semibold leading-none bg-white rounded " id="phone_home" placeholder="Phone Number" name="phone_home" 
       onChange={this.postPhone} 
       minLength={13}
+      maxlength={13}
       required
       />
+
                                                         </div>
                                                     </div>
 

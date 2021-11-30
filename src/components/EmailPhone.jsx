@@ -181,7 +181,7 @@ class EmailPhone extends Component {
         let phone = document.getElementById('phone_home').value;
 
 
-       if(email.length === 0 || phone.length === 0 && phone.length < 13){
+       if(email.length === 0 || phone.length === 0 && phone.length < 14){
            document.getElementById('next').hidden = true;
 
           
@@ -275,8 +275,8 @@ class EmailPhone extends Component {
       country="US"
       className="appearance-none w-full p-3 text-lg font-semibold leading-none bg-white rounded " id="phone_home" placeholder="Phone Number" name="phone_home" 
       onChange={this.postPhone} 
-      minLength={13}
-      maxlength={13}
+      minLength={14}
+      maxlength={14}
       required
       />
 

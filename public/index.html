@@ -68,6 +68,15 @@
     <input type="hidden" id="lp" name="lp" /> 
     <input type="hidden" id="url" name='url' />
 
+    <!-- Google ads terms -->
+    <input type='hidden' id='gclid' name='gclid' />
+    <input type='hidden' id='medium' name='medium' />
+    <input type='hidden' id='campaign' name='campaign' />
+    <input type='hidden' id='source' name='source' />
+    <input type='hidden' id='keyword' name='keyword' />
+    
+
+
     <script> 
       const urlSearch = window.location.search;
 
@@ -75,6 +84,19 @@
 
       const lp = urlParams.get('lp_request_id');
 
+      const gclid = urlParams.get('gclid');
+
+      const medium = urlParams.get('utm_medium');
+      const campaign = urlParams.get('utm_campaign');
+      const source = urlParams.get('utm_source');
+      const kw = urlParams.get('keyword');
+
+      document.getElementById('lp').value = lp;
+      document.getElementById('gclid').value = gclid;
+      document.getElementById('medium').value = medium;
+      document.getElementById('campaign').value = campaign;
+      document.getElementById('source').value = source;
+      document.getElementById('keyword').value = kw;
       document.getElementById('lp').value = lp;
       </script> 
 

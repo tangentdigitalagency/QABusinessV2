@@ -63,6 +63,7 @@ class App extends Component {
       useragent: navigator.userAgent,
       lp_request_id: document.getElementById('lp').value,
       entrance_url: document.referrer,
+      gclid: document.getElementById('gclid').value,
       utm_medium: document.getElementById('medium').value,
       utm_campaign: document.getElementById('campaign').value,
       utm_source: document.getElementById('source').value,
